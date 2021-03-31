@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PENGELOLA.UPDATEKOST.UpdateMarkerKostActivity">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-light"
+                android:text="Ubah Marker Kost"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:layout_below="@id/topBar"
+        android:id="@+id/mapViewMarker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.mapbox.mapboxsdk.maps.MapView>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/floatActionButtonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:fab_size="normal"
+        android:clickable="true"
+        android:src="@drawable/ic_save_white_24dp"
+        app:fab_colorNormal="@color/colorAccent" />
+
+</RelativeLayout>

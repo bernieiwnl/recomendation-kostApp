@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VERIFIKASIUSER.DetailVerifikasiUser">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-light"
+                android:text="Detail Verifikasi User"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/userContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtNamaLengkap"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Nama Lengkap"
+                    android:textSize="15sp"
+                    android:layout_toLeftOf="@id/profile_image"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/namaLengkap"
+                    android:layout_below="@+id/txtNamaLengkap"
+                    android:layout_toLeftOf="@id/profile_image"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:text="Agustian Suhartono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtAlamatEmail"
+                    android:layout_below="@+id/namaLengkap"
+                    android:layout_toLeftOf="@id/profile_image"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Email"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/alamatEmail"
+                    android:layout_below="@+id/txtAlamatEmail"
+                    android:layout_toLeftOf="@id/profile_image"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:text="berniecxy@gmail.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtNomorTelepon"
+                    android:layout_below="@+id/alamatEmail"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Nomor Telepon"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nomorTelepon"
+                    android:layout_below="@+id/txtNomorTelepon"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:text="085643480436"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="75dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/profile_image"
+                    android:src="@drawable/dizzy"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="75dp">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/line1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/userContent"
+                android:layout_width="match_parent"
+                android:background="#e0e0e0"
+                android:layout_height="1dp">
+            </View>
+
+            <TextView
+                android:id="@+id/txtJudul"
+                android:layout_below="@+id/line1"
+                android:layout_width="match_parent"
+                android:textSize="16dp"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:text="Data yang diberikan untuk verifikasi"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textDeskripsi"
+                android:layout_below="@id/txtJudul"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textStart"
+                android:textSize="13dp"
+                android:text="Berikut merupakan data - data yang diberikan pengguna untuk menjadi pengelola kost. Untuk menjadi pengelola kost data - data verifikasi harus valid dan sesuai dengan identitas yang diberikan"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtAlamatPengguna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textDeskripsi"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Alamat">
+            </TextView>
+
+            <TextView
+                android:id="@+id/alamatPengguna"
+                android:layout_below="@id/txtAlamatPengguna"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/txtJenisIdentitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alamatPengguna"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Jenis Identitas">
+            </TextView>
+
+            <TextView
+                android:id="@+id/jenisIdentitas"
+                android:layout_below="@id/txtJenisIdentitas"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtFotoIdentitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jenisIdentitas"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Foto Identitas">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/fotoIdentitas"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/txtFotoIdentitas"
+                android:layout_marginTop="5dp"></ImageView>
+
+            <TextView
+                android:id="@+id/txtSelfieIdentitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fotoIdentitas"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Selfie Identitas">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/selfieIdentitas"
+                android:layout_below="@id/txtSelfieIdentitas"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_height="300dp">
+            </ImageView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnVerifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/button_android"
+            android:padding="15dp"
+            android:text="Verifikasi"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

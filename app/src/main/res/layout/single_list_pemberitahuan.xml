@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:src="@drawable/notif"
+        android:layout_width="35dp"
+        android:layout_height="35dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_marginLeft="10dp"
+        android:text="Berjuta Martabak Diskon s/d Rp.40rb!"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:maxLines="1"
+        android:layout_toRightOf="@id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/deskrpsi"
+        android:layout_below="@id/judul"
+        android:layout_marginTop="5dp"
+        android:text="Bikin puasa dirumah makan meriah"
+        android:textColor="#000000"
+        android:maxLines="1"
+        android:textSize="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+
+
+
+
+</RelativeLayout>

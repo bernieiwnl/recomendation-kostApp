@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".INSERTKOST.InsertKost_2">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Data Kost"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewInsert"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="77dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Inputkan Informasi Kost"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lengkapi data kost milikmu agar kost cepat diverifikasi dan dapat diiklankan"
+                        android:textColor="#ffff"
+                        android:textSize="13sp"></TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Kost"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/radioJenis"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioLaki"
+                            android:layout_gravity="left"
+                            android:layout_width="wrap_content"
+                            android:text="Kost Laki - Laki"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radioPerempuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Kost Perempuan"></RadioButton>
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Harga Sewa Kost"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/harga"
+                    android:layout_height="wrap_content"
+                    android:hint="Harga Sewa"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text"
+                    app:helperText="Inputkan harga sewa tempat kost milikmu">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editHargaKamarKost"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:textSize="15dp"
+                        android:text=""
+                        android:inputType="number"
+                        android:layout_height="65dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Sewa"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:id="@+id/jenisSewa"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/sewaBulanan"
+                            android:layout_width="wrap_content"
+                            android:text="Bulan"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/sewaSemester"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:text="Semester"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/sewaTahun"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tahun"></RadioButton>
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ukuran Kamar Kost"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/ukuranKamar"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/ukuran2x3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 x 3">
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/ukuran3x3"
+                            android:text="3 x 3"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/ukuran3x4"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="3 x 4"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/ukuran4x4"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="4 x 4"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/ukuran4x5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 x 5"></RadioButton>
+
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jumlah Kamar Kost"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/jumlah"
+                    android:layout_height="wrap_content"
+                    android:hint="Jumlah Kamar"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text"
+                    app:helperText="Inputkan jumlah seluruh kamar kost milikmu">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editJumlahKamarKost"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:textSize="15dp"
+                        android:text=""
+                        android:inputType="number"
+                        android:layout_height="65dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sisa Kamar Kost"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sisa"
+                    android:layout_height="wrap_content"
+                    android:hint="Sisa Kamar"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text"
+                    app:helperText="Inputkan sisa kamar kost milikmu yang kosong">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editSisaKamarKost"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:textSize="15dp"
+                        android:text=""
+                        android:inputType="number"
+                        android:layout_height="65dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Keterangan Kost"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/keterangan"
+                    android:layout_height="wrap_content"
+                    android:hint="Keterangan Kost"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text"
+                    app:helperText="Inputkan keterangan kost milikmu yang kosong">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editKeteranganKost"
+                        android:layout_width="match_parent"
+                        android:gravity="start|top"
+                        android:padding="15dp"
+                        android:textSize="15dp"
+                        android:text=""
+                        android:inputType="textMultiLine"
+                        android:layout_height="150dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:background="#e0e0e0"
+                android:layout_height="1dp">
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Identitas Pengelola Kost"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lengkapi data pengelola kost dengan lengkap dan benar untuk memudahkan proses pengiklanan"
+                        android:textColor="#ffff"
+                        android:textSize="13sp"></TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nama Pengelola Kost"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/namaPengelola"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Pengelola"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="clear_text"
+                        app:helperText="Inputkan nama lengkap pengelola kost">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editNamaPengelolaKost"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=""
+                            android:inputType="text"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nomor Telpon Pengelola Kost"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nomorTelepon"
+                        android:layout_height="wrap_content"
+                        android:hint="Nomor Telepon"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="clear_text"
+                        app:helperText="Inputkan nomor telepon pengelola kost">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editNomorPengelolaKost"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Bank"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/bank"
+                        android:layout_height="wrap_content"
+                        android:hint="Jenis Bank"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:helperText="Pilih jenis bank sesuai dengan nomor rekeningmu">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editJenisBank"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=" "
+                            android:editable="false"
+                            android:inputType="none"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nomor Rekening"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nomorRekening"
+                        android:layout_height="wrap_content"
+                        android:hint="Nomor Rekening"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="clear_text"
+                        app:helperText="Inputkan nomor rekening dengan benar ">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editNomorRekening"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Atas Nama Nomor Rekening"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/atasNama"
+                        android:layout_height="wrap_content"
+                        android:hint="Atas Nama"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="clear_text"
+                        app:helperText="Inputkan nama pemilik nomor rekening">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editAtasNama"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=""
+                            android:inputType="text"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:background="#e0e0e0"
+                android:layout_height="1dp">
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lokasi Kost"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lengkapi data pengelola kost dengan lengkap dan benar untuk memudahkan proses pengiklanan"
+                        android:textColor="#ffff"
+                        android:textSize="13sp"></TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Alamat Lengkap Kost"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/alamatKost"
+                        android:layout_height="wrap_content"
+                        android:hint="Alamat Kost"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="clear_text"
+                        app:helperText="Inputkan alamat kost dengan lengkap (*kecamatan disertakan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editAlamatKost"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=""
+                            android:inputType="textMultiLine"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kota"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/kota"
+                        android:layout_height="wrap_content"
+                        android:hint="Kota"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:helperText="Pilih kota sesuai dengan lokasi kostmu">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editKotaKost"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=" "
+                            android:editable="false"
+                            android:inputType="none"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Provinsi"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/provinsi"
+                        android:layout_height="wrap_content"
+                        android:hint="Provinsi"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:helperText="Pilih provinsi sesuai dengan lokasi kostmu">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editProvinsiKost"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=" "
+                            android:editable="false"
+                            android:inputType="none"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kode Pos"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="13sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/kodePos"
+                        android:layout_height="wrap_content"
+                        android:hint="Kode Pos"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="clear_text"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="6"
+                        app:helperText="Inputkan kode pos kost">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editKodePos"
+                            android:layout_width="match_parent"
+                            android:padding="15dp"
+                            android:textSize="15dp"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_height="65dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCariLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:padding="15dp"
+                android:text="Cari Lokasi"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Marker Kost"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/colorAccent"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.mapbox.mapboxsdk.maps.MapView
+                        android:id="@+id/mapViewMarker"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:mapbox_cameraTargetLat="-7.267590"
+                        app:mapbox_cameraTargetLng="112.752098"
+                        app:mapbox_cameraZoom="12">
+                    </com.mapbox.mapboxsdk.maps.MapView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line3"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:background="#e0e0e0"
+                android:layout_height="1dp">
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Fasilitas Kost"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lengkapi data pengelola kost dengan lengkap dan benar untuk memudahkan proses pengiklanan"
+                        android:textColor="#ffff"
+                        android:textSize="13sp"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Fasilitas Umum"
+                android:textColor="#000000"
+                android:textSize="15sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerFasilitasUmum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Fasilitas Kamar"
+                android:textColor="#000000"
+                android:textSize="15sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerFasilitasKamar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Akses Lingkungan"
+                android:textColor="#000000"
+                android:textSize="15sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerAksesLingkungan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSimpanDataKost"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/button_android"
+                android:padding="15dp"
+                android:text="Simpan Data Kost"
+                android:textColor="#ffffff"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

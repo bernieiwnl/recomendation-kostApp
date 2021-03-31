@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PEMBERITAHUAN.ADMIN.PemberitahuanKeluhan">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-light"
+                android:text="Pemberitahuan Keluhan"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/topBar"
+        android:layout_above="@id/bottomBar"
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeContent"
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/judulPemberitahuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:text="Pemberitahuan Keluhan Pengguna">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tanggalPemberitaahuan"
+                android:layout_below="@id/judulPemberitahuan"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Minggu, 10 Mei 2020">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/isiPemberitahuan"
+                android:layout_below="@+id/tanggalPemberitaahuan"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:text="Ada keluhan baru dari user pengguna terhadap performa kost yang di iklankan. Agar pengguna tetap nyaman menggunakan aplikasi ini lakukanlah suspend terhadap tempat kost yang dikeluhkan. Sebelum melakukan suspend validasi kebenaran performa kost tersebut.">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtJudul"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/isiPemberitahuan"
+                android:layout_width="match_parent"
+                android:textSize="16dp"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:text="Data Keluhan Pengguna Terhadap Tempat Kost"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textDeskripsi"
+                android:layout_below="@id/txtJudul"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textStart"
+                android:textSize="13dp"
+                android:text="Berikut merupakan data - data yang telah dilaporkan oleh pengguna terhadap kost terkait. Data - data tersebut terdiri dari jenis laporan dan deskripsi keluhan terkait"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtNamaPelapor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textDeskripsi"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Nama Pengguna">
+            </TextView>
+
+            <TextView
+                android:id="@+id/namaPelapor"
+                android:layout_below="@id/txtNamaPelapor"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/txtTanggalLaporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/namaPelapor"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Tanggal Keluhan">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tanggalLapor"
+                android:layout_below="@id/txtTanggalLaporan"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtJenisLaporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tanggalLapor"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Jenis Keluhan">
+            </TextView>
+
+            <TextView
+                android:id="@+id/jenisLaporan"
+                android:layout_below="@id/txtJenisLaporan"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtdeskripsiLaporan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jenisLaporan"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Jenis Keluhan">
+            </TextView>
+
+            <TextView
+                android:id="@+id/deskripsiLaporan"
+                android:layout_below="@id/txtdeskripsiLaporan"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#000000"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDetailKeluhan"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_android"
+            android:padding="15dp"
+            android:text="Detail Keluhan"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

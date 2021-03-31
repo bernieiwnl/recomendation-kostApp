@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/txtNamaPelapor"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Nama Pelapor"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/namaPelapor"
+        android:layout_below="@+id/txtNamaPelapor"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtJenisLaporan"
+        android:layout_below="@+id/namaPelapor"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Jenis Laporan"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/jenisLaporan"
+        android:layout_below="@+id/txtJenisLaporan"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/txtTanggalLaporan"
+        android:layout_below="@+id/jenisLaporan"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Tanggal Laporan"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tanggalLapor"
+        android:layout_below="@+id/txtTanggalLaporan"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtAlamatKost"
+        android:layout_below="@+id/tanggalLapor"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Alamat Kost yang Dilaporkan"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/alamatKost"
+        android:layout_below="@+id/txtAlamatKost"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageKost"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:layout_width="175dp"
+        android:layout_height="120dp">
+    </ImageView>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardViewJenisKost"-->
+<!--        android:layout_below="@id/alamatKost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_columnWeight="1"-->
+<!--        android:layout_rowWeight="1"-->
+<!--        app:cardCornerRadius="15dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/jenis"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="#1976d2"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/jenisKost"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:textSize="10dp"-->
+<!--                android:text=""-->
+<!--                android:textColor="#ffffff">-->
+
+<!--            </TextView>-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardViewJumlahKamar"-->
+<!--        android:layout_below="@id/alamatKost"-->
+<!--        android:layout_toRightOf="@id/cardViewJenisKost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_columnWeight="1"-->
+<!--        android:layout_rowWeight="1"-->
+<!--        app:cardCornerRadius="15dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/ada"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="#f9a825"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/jumlahKamar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:textSize="10dp"-->
+<!--                android:text=""-->
+<!--                android:textColor="#ffffff">-->
+<!--            </TextView>-->
+
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardViewSisaKamar"-->
+<!--        android:layout_below="@id/alamatKost"-->
+<!--        android:layout_toRightOf="@id/cardViewJumlahKamar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_columnWeight="1"-->
+<!--        android:layout_rowWeight="1"-->
+<!--        app:cardCornerRadius="15dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/sisa"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="#4527a0"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/sisaKamar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:textSize="10dp"-->
+<!--                android:text=""-->
+<!--                android:textColor="#ffffff">-->
+<!--            </TextView>-->
+
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>

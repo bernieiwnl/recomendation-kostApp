@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MAINKOST.DetailKostPenggunaActivity">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:id="@+id/titleAlamatKost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Kost Laki-Laki,"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@id/relativeContent"
+        android:layout_below="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="match_parent">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/gambarKost"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/no_image_available"
+                    android:scaleType="centerCrop"></com.smarteist.autoimageslider.SliderView>
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_below="@+id/gambarKost"
+                    android:layout_margin="15dp"
+                    android:textColor="#212121"
+                    android:text="Rp.500.0000.000 / bulan"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewJenisKost"
+                    android:layout_below="@id/harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:background="#1976d2"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/jenisKost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textSize="10dp"
+                            android:text="Laki - Laki"
+                            android:textColor="#ffffff">
+                        </TextView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewJumlahKamar"
+                    android:layout_below="@id/harga"
+                    android:layout_toRightOf="@id/cardViewJenisKost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:background="#f9a825"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/jumlahKamar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textSize="10dp"
+                            android:text="Ada 2 Kamar"
+                            android:textColor="#ffffff">
+                        </TextView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewSisaKamar"
+                    android:layout_below="@id/harga"
+                    android:layout_toRightOf="@id/cardViewJumlahKamar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:background="#4527a0"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/sisaKamar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textSize="10dp"
+                            android:text="Sisa 2 Kamar"
+                            android:textColor="#ffffff">
+                        </TextView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/alamatKost"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@id/cardViewJenisKost"
+                    android:textSize="16dp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:text="Jl.Ngagel Jaya Utara IV / 19, Kota Surabaya, Jawa Timur 60283"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/update"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@id/alamatKost"
+                    android:textSize="11dp"
+                    android:text="Terakhir update 8 May 2020 "
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/update"
+                    android:layout_width="match_parent"
+                    android:background="#e0e0e0"
+                    android:layout_height="1dp">
+                </View>
+
+                <TextView
+                    android:id="@+id/textLuasKamar"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Luas Kamar"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_below="@id/textLuasKamar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/bed_size"></ImageView>
+
+                <TextView
+                    android:id="@+id/ukuranKamar"
+                    android:layout_below="@id/textLuasKamar"
+                    android:layout_toRightOf="@id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="10dp"
+                    android:text="2m x 4m"
+                    android:textColor="#000000">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/textKeterangan"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Keterangan Kost"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/keteranganKost"
+                    android:layout_below="@id/textKeterangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="10dp"
+                    android:text=""
+                    android:textColor="#000000">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/textFasilitasUmum"
+                    android:layout_below="@+id/keteranganKost"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Fasilitas Umum Kost"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerFasilitasUmum"
+                    android:layout_below="@id/textFasilitasUmum"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/textFasilitasKamar"
+                    android:layout_below="@+id/recyclerFasilitasUmum"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Fasilitas Kamar Kost"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerFasilitasKamar"
+                    android:layout_below="@id/textFasilitasKamar"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/textFasilitasAkses"
+                    android:layout_below="@+id/recyclerFasilitasKamar"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Akses Lingkungan Kost"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAksesLingkungan"
+                    android:layout_below="@id/textFasilitasAkses"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@id/recyclerAksesLingkungan"
+                    android:layout_width="match_parent"
+                    android:background="#e0e0e0"
+                    android:layout_height="1dp">
+                </View>
+
+                <TextView
+                    android:id="@+id/textLokasiKost"
+                    android:layout_below="@+id/line2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Lokasi Kost"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:textSize="13dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <com.mapbox.mapboxsdk.maps.MapView
+                    android:id="@+id/mapKost"
+                    android:layout_below="@id/textLokasiKost"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                </com.mapbox.mapboxsdk.maps.MapView>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        app:menu_fab_size="normal"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/colorAccent"
+        app:menu_colorRipple="#99FFFFFF"
+        app:menu_animationDelayPerItem="50"
+        app:menu_icon="@drawable/ic_menu_black_24dp"
+        app:menu_buttonSpacing="0dp"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_paddingTop="4dp"
+        app:menu_labels_paddingRight="8dp"
+        app:menu_labels_paddingBottom="4dp"
+        app:menu_labels_paddingLeft="8dp"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_textColor="#FFFFFF"
+        app:menu_labels_textSize="14sp"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_colorNormal="#333333"
+        app:menu_labels_colorPressed="#444444"
+        app:menu_labels_colorRipple="#66FFFFFF"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_position="left"
+        app:menu_openDirection="up"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_fab_label="menu">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/suspendKost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_layers_clear_black_24dp"
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccent"
+            app:fab_size="normal"
+            app:fab_label="Suspend Kost" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/laporkanKost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_report_report_24dp"
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccent"
+            app:fab_size="normal"
+            app:fab_label="Laporkan Kost" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/chatPengelola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chat_white_24dp"
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccent"
+            app:fab_size="normal"
+            app:fab_label="Kirim Pesan Pengelola" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/pesanKost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_assignment_turned_in_pesan_24dp"
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccent"
+            app:fab_size="normal"
+            app:fab_label="Pesan Kost" />
+
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

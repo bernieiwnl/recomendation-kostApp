@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/txtNamaLengkap"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Nama Lengkap"
+        android:textSize="15sp"
+        android:layout_toLeftOf="@id/profile_image"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/namaLengkap"
+        android:layout_below="@+id/txtNamaLengkap"
+        android:layout_toLeftOf="@id/profile_image"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text="Agustian Suhartono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtAlamatEmail"
+        android:layout_below="@+id/namaLengkap"
+        android:layout_toLeftOf="@id/profile_image"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Email"
+        android:textSize="15sp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/alamatEmail"
+        android:layout_below="@+id/txtAlamatEmail"
+        android:layout_toLeftOf="@id/profile_image"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text="berniecxy@gmail.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/txtNomorTelepon"
+        android:layout_below="@+id/alamatEmail"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Nomor Telepon"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/nomorTelepon"
+        android:layout_below="@+id/txtNomorTelepon"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:text="085643480436"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="75dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/profile_image"
+        android:src="@drawable/dizzy"
+        android:layout_alignParentEnd="true"
+        android:layout_height="75dp">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+</RelativeLayout>

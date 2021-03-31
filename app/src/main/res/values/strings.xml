@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Kostku</string>
+    <string name="get_started">get started</string>
+    <string name="full_name">Full Name</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    // array list
+
+    <!--    <string-array name="kota">-->
+    <!--        <item>Surabaya</item>-->
+    <!--        <item>Jakarta</item>-->
+    <!--        <item>Jogjakarta</item>-->
+    <!--        <item>Semarang</item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="provinsi">-->
+    <!--        <item>Jawa Timur</item>-->
+    <!--        <item>Jawa Tengah</item>-->
+    <!--        <item>Jawa Barat</item>-->
+    <!--    </string-array>-->
+
+
+</resources>

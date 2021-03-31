@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "490930060402",
+    "firebase_url": "https://rekomendasi-kost-app.firebaseio.com",
+    "project_id": "rekomendasi-kost-app",
+    "storage_bucket": "rekomendasi-kost-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490930060402:android:2f2d689c0968dad2c216eb",
+        "android_client_info": {
+          "package_name": "com.example.rekomendasikostapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490930060402-ic2rljc1lfdsk5tpsvbccjqpe3pcd7sd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rekomendasikostapp",
+            "certificate_hash": "5fbf0a27981d04ca93dbf07972c1decb55bacad8"
+          }
+        },
+        {
+          "client_id": "490930060402-fm4a503h93iet2md1mtnncuvegb0bsku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-jOkn6E85xow72JHSHKcc4TWf0HfsKho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490930060402-fm4a503h93iet2md1mtnncuvegb0bsku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PENCARIAN.FilterKostActivity">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_chevron_left_black_24dp"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Filter"
+                android:textColor="#FFFF"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/namaJenisKost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kost"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroupJenisKost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/namaJenisKost">
+
+                    <RadioButton
+                        android:id="@+id/kostLakiLaki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kost Laki Laki">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/kostPerempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kost Perempuan"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/kostLakiLaki">
+                    </RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/namaJenisUkuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ukuran Kamar"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/radioGroupJenisKost">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroupJenisUkuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@+id/namaJenisUkuran">
+
+                <RadioButton
+                    android:id="@+id/ukuran2x3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 x 3">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/ukuran3x3"
+                    android:text="3 x 3"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/ukuran3x4"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="3 x 4"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/ukuran4x4"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="4 x 4"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/ukuran4x5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 x 5"></RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/rangeHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Range Harga"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/radioGroupJenisUkuran">
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/relativeHarga"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rangeHarga"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editHargaMinimal"
+                    android:layout_height="wrap_content"
+                    android:hint="Harga Minimal"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="160dp"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hargaMinimal"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:textSize="15dp"
+                        android:text="0"
+                        android:inputType="number"
+                        android:layout_height="65dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editHargaMaximal"
+                    android:layout_toRightOf="@id/editHargaMinimal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Harga Maximal"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="160dp"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hargaMaximal"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:textSize="15dp"
+                        android:text="0"
+                        android:inputType="number"
+                        android:layout_height="65dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/namaFasilitasUmum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas Umum"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/relativeHarga">
+            </TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFasilitasUmum"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/namaFasilitasUmum"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/namaFasilitasKamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas Kamar"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/recyclerFasilitasUmum">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFasilitasKamar"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/namaFasilitasKamar"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/namaAksesLingkungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas Akses Lingkungan"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/recyclerFasilitasKamar">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAksesLingkungan"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/namaAksesLingkungan"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.github.clans.fab.FloatingActionButton
+    android:id="@+id/buttonFilter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:clickable="true"
+    app:fab_colorNormal="@color/colorAccent"
+    app:fab_size="normal"
+    android:src="@drawable/ic_save_white_24dp"/>
+
+</RelativeLayout>

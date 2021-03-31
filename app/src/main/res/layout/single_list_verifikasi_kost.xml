@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/topContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/gambarKost"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_image_available">
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/belowContent"
+        android:layout_below="@+id/topContent"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/hargaKost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Harga Kost"
+            android:textSize="13sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/alamatKost"
+            android:layout_below="@id/hargaKost"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:text="ALamat Kost"
+            android:textStyle="bold"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewJenisKost"
+            android:layout_below="@id/alamatKost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:id="@+id/jenis"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:background="#1976d2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/jenisKost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:textSize="10dp"
+                    android:text="Laki - Laki"
+                    android:textColor="#ffffff">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewJumlahKamar"
+            android:layout_below="@id/alamatKost"
+            android:layout_toRightOf="@id/cardViewJenisKost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:id="@+id/ada"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:background="#f9a825"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/jumlahKamar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:textSize="10dp"
+                    android:text="Ada 2 Kamar"
+                    android:textColor="#ffffff">
+                </TextView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSisaKamar"
+            android:layout_below="@id/alamatKost"
+            android:layout_toRightOf="@id/cardViewJumlahKamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:id="@+id/sisa"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:background="#4527a0"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sisaKamar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:textSize="10dp"
+                    android:text="Sisa 2 Kamar"
+                    android:textColor="#ffffff">
+                </TextView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_below="@id/cardViewJumlahKamar"
+            android:layout_marginTop="10dp"
+            android:textSize="13dp"
+            android:text="Belum Terverifikasi"
+            android:textStyle="bold|italic"
+            android:textColor="#8c0032"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+    </RelativeLayout>
+</RelativeLayout>

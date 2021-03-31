@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".REKOMENDASI.PemilihanJenisKost">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-light"
+                android:text="Pemilihan Jenis Kost"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/namaJenisKost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kost"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroupJenisKost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/namaJenisKost">
+                <RadioButton
+                    android:id="@+id/kostLakiLaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kost Laki Laki">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/kostPerempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kost Perempuan"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/kostLakiLaki">
+                </RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/namaJenisPembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Pembayaran"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/radioGroupJenisKost">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroupJenisPembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/namaJenisPembayaran">
+
+                <RadioButton
+                    android:id="@+id/sewaBulanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiap Bulan">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/sewaSemester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiap Semester"
+                    android:layout_toRightOf="@+id/sewaBulanan">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/sewaTahun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiap Tahun"
+                    android:layout_toRightOf="@+id/sewaSemester">
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/namaJenisUkuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ukuran Kamar"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/radioGroupJenisPembayaran">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroupJenisUkuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/namaJenisUkuran">
+                <RadioButton
+                    android:id="@+id/ukuran2x3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2m x 3m">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/ukuran25x35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2,5m x 3,5m"
+                    android:layout_toRightOf="@+id/sewaBulanan">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/ukuran3x4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3m x 4m"
+                    android:layout_toRightOf="@+id/sewaSemester">
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/rangeHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Range Harga"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/radioGroupJenisUkuran">
+            </TextView>
+
+            <EditText
+                android:id="@+id/hargaMinimal"
+                android:layout_width="150dp"
+                android:layout_height="56dp"
+                android:background="@drawable/edit_text_shape"
+                android:fontFamily="sans-serif-light"
+                android:textAlignment="center"
+                android:hint="Harga Minimal"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rangeHarga"/>
+
+            <EditText
+                android:id="@+id/hargaMaximal"
+                android:layout_width="150dp"
+                android:layout_height="56dp"
+                android:background="@drawable/edit_text_shape"
+                android:fontFamily="sans-serif-light"
+                android:hint="Harga Max"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/hargaMinimal"
+                android:layout_below="@+id/rangeHarga"/>
+
+            <TextView
+                android:id="@+id/namaFasilitasUmum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas Umum"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/hargaMaximal">
+            </TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFasilitasUmum"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/namaFasilitasUmum"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/namaFasilitasKamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas Kamar"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/recyclerFasilitasUmum">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFasilitasKamar"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/namaFasilitasKamar"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/namaAksesLingkungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas Akses Lingkungan"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/recyclerFasilitasKamar">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAksesLingkungan"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/namaAksesLingkungan"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        app:fab_size="normal"
+        app:fab_colorNormal="@color/colorAccent"
+        android:src="@drawable/ic_save_white_24dp"/>
+
+</RelativeLayout>

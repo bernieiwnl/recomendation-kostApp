@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    tools:context=".VERIFIKASIUSER.VerifikasiAkunActivity">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:text="Verifikasi Akun"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Verifikasi Identitas Anda"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"></TextView>
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#424242"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:id="@+id/linierHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="#ffff"
+                        android:text="Verifikasi datamu agar dapat mengiklankan kost milikmu. Verifikasi hanya membutuhkan foto kartu identitas dan foto selfie dengan kartu identitasmu.">
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Alamat"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtAlamatPengguna"
+                android:layout_height="wrap_content"
+                android:hint="Input Alamat Lengkap"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text"
+                app:helperText="Inputkan alamat anda sesuai keadaan anda saat ini">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/alamatPengguna"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:text=""
+                    android:inputType="textMultiLine"
+                    android:layout_height="65dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Jenis Identitas"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"></TextView>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupJenisIdentitas"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/identitasKTP"
+                        android:layout_width="wrap_content"
+                        android:text="KTP"
+                        android:layout_height="wrap_content">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/identitasSIM"
+                        android:layout_marginLeft="45dp"
+                        android:layout_width="wrap_content"
+                        android:text="SIM"
+
+                        android:layout_height="wrap_content">
+                    </RadioButton>
+
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Upload Foto Identitas"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"></TextView>
+
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <GridLayout
+                    android:layout_below="@+id/txtMasterKost"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:orientation="horizontal"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/kartu_identitas"
+                        android:src="@drawable/kartu_identitas"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp">
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/selfie_kartu"
+                        android:src="@drawable/selfie_kartu"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp">
+                    </ImageView>
+
+
+                </GridLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnVerificationUser"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:padding="15dp"
+            android:text="Verifikasi User"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

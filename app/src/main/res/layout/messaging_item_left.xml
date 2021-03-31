@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="40dp"
+        android:src="@drawable/dizzy"
+        android:layout_height="40dp">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/messageUser"
+        android:layout_width="wrap_content"
+        android:maxWidth="270dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageProfile"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="Pesan Pengirim"
+        android:background="@drawable/messaging_left"
+        android:layout_marginLeft="5dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/messageUser"
+        android:gravity="bottom"
+        android:text="Baca"
+        android:visibility="gone"
+        android:textColor="#000000"></TextView>
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/messageUser"
+        android:gravity="bottom"
+        android:text="15.20"
+        android:textColor="#000000"></TextView>
+
+
+</RelativeLayout>

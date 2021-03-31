@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rekomendasikostapp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PREFERENSI.MenuPreferensi"></activity>
+        <activity android:name=".REKOMENDASI.TambahKriteriaKost" />
+        <activity android:name=".REKOMENDASI.TambahSubKriteriaFasilitasAkses" />
+        <activity android:name=".REKOMENDASI.TambahSubKriteriaFasilitasKamar" />
+        <activity android:name=".REKOMENDASI.TambahSubKriteriaFasilitasUmum" />
+        <activity android:name=".PEMBERITAHUAN.ADMIN.PemberitahuanPengelola" />
+        <activity android:name=".PEMBERITAHUAN.ADMIN.PemberitahuanPengelolaBaru" />
+        <activity android:name=".PEMBERITAHUAN.PENGELOLA.PemberitahuanSuspendKost" />
+        <activity android:name=".PREFERENSI.UbahAksesPreferensi" />
+        <activity android:name=".PREFERENSI.UbahKamarPreferensi" />
+        <activity android:name=".PREFERENSI.UbahUmumPreferensi"></activity>
+        <activity android:name=".PREFERENSI.UbahKriteriaPreferensi" />
+        <activity android:name=".PENCARIAN.PencarianLokasiKost" />
+        <activity android:name=".LOCATION.SimpanLokasi" />
+        <activity android:name=".LOCATION.UpdateLokasi" />
+        <activity android:name=".VERIFIKASIUSER.DetailVerifikasiUser" />
+        <activity android:name=".VERIFIKASIUSER.ListVerifikasiUser" />
+        <activity android:name=".PEMBERITAHUAN.ADMIN.PemberitahuanKeluhan" />
+        <activity android:name=".PENCARIAN.PencarianKostActivity" />
+        <activity android:name=".PEMBERITAHUAN.PENGGUNA.PemberitahuanPemesananBerhasil" />
+        <activity android:name=".PEMBERITAHUAN.UNIVERSAL.PemberitahuanPembatalanPemesanan" />
+        <activity android:name=".PEMBERITAHUAN.PENGELOLA.PemberitahuanPenghuniBaru" />
+        <activity android:name=".PEMBERITAHUAN.PENGGUNA.PemberitahuanKirimPembayaran" />
+        <activity android:name=".REPORT.DetailLaporanPengguna" />
+        <activity android:name=".REPORT.ListLaporanPengguna" />
+        <activity android:name=".REPORT.FormReportKost" />
+        <activity android:name=".PEMBERITAHUAN.PENGELOLA.PemberitahuanBuktiPembayaran" />
+        <activity android:name=".PEMESANAN.DetailImageTransfer" />
+        <activity android:name=".PEMESANAN.ListHistoryPemesananKost" />
+        <activity android:name=".PEMESANAN.DetailPemesananPengguna" />
+        <activity android:name=".PEMESANAN.DetailPemesananPengelola" />
+        <activity android:name=".PEMBERITAHUAN.PENGGUNA.PemberitahuanTransfer" />
+        <activity android:name=".PEMBERITAHUAN.ADMIN.PemberitahuanIklanBaru" />
+        <activity android:name=".PEMBERITAHUAN.PENGELOLA.PemberitahuanVerifikasiKost" />
+        <activity android:name=".PEMBERITAHUAN.PENGELOLA.PemberitahuanPemesanan" />
+        <activity android:name=".LIST.ListBankActivity" />
+        <activity android:name=".PEMESANAN.ListDurasiPemesanan" />
+        <activity android:name=".REKOMENDASI.PerhitunganRekomendasi" />
+        <activity android:name=".REKOMENDASI.PrioritasAksesLingkungan" />
+        <activity android:name=".REKOMENDASI.PrioritasFasilitasKamar" />
+        <activity android:name=".REKOMENDASI.PrioritasFasilitasUmum" />
+        <activity android:name=".REKOMENDASI.PemilihanJenisKost" />
+        <activity android:name=".REKOMENDASI.AlternatifKostActivity" />
+        <activity android:name=".REKOMENDASI.PemilihanKriteriaActivity" />
+        <activity android:name=".MESSAGING.ImageDetailActivity" />
+        <activity android:name=".PENCARIAN.FilterKostActivity" />
+        <activity android:name=".PEMESANAN.ListPemesananKost" />
+        <activity android:name=".PEMESANAN.PembayaranActivity" />
+        <activity android:name=".VERIFICATION.KostVerificationDetailActivity" />
+        <activity android:name=".VERIFICATION.KostVerificationActivity" />
+        <activity android:name=".PEMESANAN.PemesananActivity" />
+        <activity android:name=".MESSAGING.MessageActivity" />
+        <activity android:name=".MAINKOST.DetailKostPenggunaActivity" />
+        <activity android:name=".LIST.ListProvinsiActivity" />
+        <activity android:name=".LIST.ListKotaActivity" />
+        <activity android:name=".PENGELOLA.UPDATEKOST.TambahFasilitasKostActivity" />
+        <activity android:name=".PENGELOLA.UPDATEKOST.UpdateFasilitasKostActivity" />
+        <activity android:name=".PENGELOLA.UPDATEKOST.UpdateMarkerKostActivity" />
+        <activity android:name=".PENGELOLA.UPDATEKOST.UpdateFotoKostActivity" />
+        <activity android:name=".PENGELOLA.UPDATEKOST.UpdateDataKostActivity" />
+        <activity android:name=".PENGELOLA.DetailKostPengelola" />
+        <activity android:name=".PENGELOLA.ListKostPengelola" />
+        <activity android:name=".MASTERDATA.UpdateMasterDataUmum" />
+        <activity android:name=".MASTERDATA.UpdateMasterDataLingkungan" />
+        <activity android:name=".MASTERDATA.UpdateMasterDataKamar" />
+        <activity android:name=".MASTERDATA.InsertMasterDataLingkungan" />
+        <activity android:name=".MASTERDATA.InsertMasterDataKamar" />
+        <activity android:name=".MASTERDATA.InsertMasterDataUmum" />
+        <activity android:name=".ADMIN.AdminAksesLingkungan" />
+        <activity android:name=".ADMIN.AdminFasilitasKamar" />
+        <activity android:name=".ADMIN.AdminFasilitasUmum" />
+        <activity android:name=".INSERTKOST.InsertKost_3" />
+        <activity android:name=".INSERTKOST.InsertKost_2" />
+        <activity android:name=".VERIFIKASIUSER.VerifikasiAkunActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".StartActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".CLASS.FetchLocationServices" />
+        <service
+            android:name=".NOTIFICATIONS.MyFirebaseService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".NOTIFICATIONS.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

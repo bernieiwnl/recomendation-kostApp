@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".REPORT.FormReportKost">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-light"
+                android:text="Form Keluhan Pengguna"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/kostContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageKost"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/alamatKost"
+                    android:layout_toLeftOf="@+id/imageKost"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:textSize="13dp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:text="Jl.Ngagel Jaya Utara IV / 19, Kota Surabaya, Jawa Timur 60283"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_below="@+id/alamatKost"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#212121"
+                    android:text="Rp750.000,00 / bulan"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_below="@id/harga"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/bed_size"></ImageView>
+
+                <TextView
+                    android:id="@+id/ukuranKamar"
+                    android:layout_below="@id/harga"
+                    android:layout_toRightOf="@id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="12dp"
+                    android:text="2m x 4m"
+                    android:textColor="#000000">
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewJenisKost"
+                    android:layout_below="@id/imageKost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/jenis"
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:background="#1976d2"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/jenisKost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textSize="10dp"
+                            android:text="Laki - Laki"
+                            android:textColor="#ffffff">
+                        </TextView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewJumlahKamar"
+                    android:layout_below="@id/imageKost"
+                    android:layout_toRightOf="@id/cardViewJenisKost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/jumlah"
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:background="#f9a825"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/jumlahKamar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textSize="10dp"
+                            android:text="Ada 2 Kamar"
+                            android:textColor="#ffffff">
+                        </TextView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewSisaKamar"
+                    android:layout_below="@id/imageKost"
+                    android:layout_toRightOf="@id/cardViewJumlahKamar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/sisa"
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:background="#4527a0"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/sisaKamar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textSize="10dp"
+                            android:text="Sisa 2 Kamar"
+                            android:textColor="#ffffff">
+                        </TextView>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/line1"
+                android:layout_margin="10dp"
+                android:layout_below="@id/kostContent"
+                android:layout_width="match_parent"
+                android:background="#e0e0e0"
+                android:layout_height="1dp">
+            </View>
+
+            <TextView
+                android:id="@+id/txtJudul"
+                android:layout_below="@+id/line1"
+                android:layout_width="match_parent"
+                android:textSize="16dp"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:text="Inputkan data - data berikut untuk melaporkan tempat kost"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textDeskripsi"
+                android:layout_below="@id/txtJudul"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textStart"
+                android:textSize="13dp"
+                android:text="Untuk melaporkan tempat kost anda hanya perlu mengisi data-data dibawah ini. Pastikan data yang anda isi ini valid dan benar, agar proses melaporkan tempat kost lebih cepat ditangani"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jenisLaporan"
+                android:layout_below="@+id/textDeskripsi"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Jenis Keluhan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                app:boxBackgroundMode="outline"
+                app:startIconDrawable="@drawable/ic_report_black_24dp"
+                app:helperText="Isikan jenis laporan disini">
+
+                <AutoCompleteTextView
+                    android:id="@+id/inputJenisLaporan"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:editable="false"
+                    android:layout_height="65dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/deskripsiLaporan"
+                android:layout_below="@+id/jenisLaporan"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Deskripsikan Keluhan Anda"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:boxBackgroundMode="outline"
+                app:helperText="Isikan deskripsi laporan disini">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputDeskripsiLaporan"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:textSize="15dp"
+                    android:text=""
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    android:layout_height="300dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnLaporkanKost"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:padding="15dp"
+            android:text="Laporkan Kost"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

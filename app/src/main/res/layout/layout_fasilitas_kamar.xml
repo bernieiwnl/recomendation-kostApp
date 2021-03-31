@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:gravity="center"
+    android:layout_width="100dp"
+    android:layout_margin="10dp"
+    android:layout_height="100dp">
+
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center">
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/namaFasilitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Fasilitas Kamar"
+        android:textSize="10sp"></TextView>
+
+
+</LinearLayout>
